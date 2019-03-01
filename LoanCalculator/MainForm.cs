@@ -35,11 +35,14 @@ namespace LoanCalculator
             // 计息方式，默认选项: 等额本息
             cmbCalcMode.SelectedIndex = 1;
 
-            // 每月天数, 默认值为 30 天.
-            txtMonthDays.Text = "30";
+            // 每月天数, 默认值为 31 天.
+            txtMonthDays.Text = "31";
 
             // 首月优惠天数, 默认值: 7天
             txtDismountDays.Text = "7";
+
+            // 设置默认还款总额
+            txtRepayment.Text = "0.00";
         }
 
         private void MainForm_Shown(object sender, EventArgs e)
@@ -93,7 +96,7 @@ namespace LoanCalculator
             }
 
             // 清空还款总额
-            txtRepayment.Text = "";
+            txtRepayment.Text = "0.00";
 
             // 计算还款总额
             string calcHistory = "";
@@ -103,7 +106,7 @@ namespace LoanCalculator
             // 显示还款总额
             txtRepayment.Text = String.Format("{0:0.00}", repayment);
 
-            // 显示还款历史
+            // 显示还款历史纪录
             txtHistory.Text = calcHistory;
             txtHistory.SelectionStart = 0;
             txtHistory.SelectionLength = 0;

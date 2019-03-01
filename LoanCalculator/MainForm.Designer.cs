@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnlLoan = new System.Windows.Forms.Panel();
             this.gpbLoan = new System.Windows.Forms.GroupBox();
+            this.lblPeriodsTip = new System.Windows.Forms.Label();
             this.lblDay1 = new System.Windows.Forms.Label();
             this.lblMonthDays = new System.Windows.Forms.Label();
             this.txtMonthDays = new System.Windows.Forms.TextBox();
@@ -53,19 +53,8 @@
             this.lblPeriods = new System.Windows.Forms.Label();
             this.lblTotal = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
-            this.lblPeriodsTip = new System.Windows.Forms.Label();
-            this.pnlLoan.SuspendLayout();
             this.gpbLoan.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pnlLoan
-            // 
-            this.pnlLoan.Controls.Add(this.gpbLoan);
-            this.pnlLoan.Location = new System.Drawing.Point(12, 11);
-            this.pnlLoan.Margin = new System.Windows.Forms.Padding(4);
-            this.pnlLoan.Name = "pnlLoan";
-            this.pnlLoan.Size = new System.Drawing.Size(635, 623);
-            this.pnlLoan.TabIndex = 0;
             // 
             // gpbLoan
             // 
@@ -95,20 +84,31 @@
             this.gpbLoan.Controls.Add(this.txtTotal);
             this.gpbLoan.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.gpbLoan.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gpbLoan.Location = new System.Drawing.Point(15, 13);
+            this.gpbLoan.Location = new System.Drawing.Point(17, 16);
             this.gpbLoan.Margin = new System.Windows.Forms.Padding(4);
             this.gpbLoan.Name = "gpbLoan";
             this.gpbLoan.Padding = new System.Windows.Forms.Padding(4);
-            this.gpbLoan.Size = new System.Drawing.Size(605, 600);
-            this.gpbLoan.TabIndex = 0;
+            this.gpbLoan.Size = new System.Drawing.Size(612, 600);
+            this.gpbLoan.TabIndex = 1;
             this.gpbLoan.TabStop = false;
             this.gpbLoan.Text = "贷款利息";
+            // 
+            // lblPeriodsTip
+            // 
+            this.lblPeriodsTip.AutoSize = true;
+            this.lblPeriodsTip.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblPeriodsTip.Location = new System.Drawing.Point(335, 76);
+            this.lblPeriodsTip.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPeriodsTip.Name = "lblPeriodsTip";
+            this.lblPeriodsTip.Size = new System.Drawing.Size(24, 16);
+            this.lblPeriodsTip.TabIndex = 56;
+            this.lblPeriodsTip.Text = "期";
             // 
             // lblDay1
             // 
             this.lblDay1.AutoSize = true;
             this.lblDay1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblDay1.Location = new System.Drawing.Point(481, 118);
+            this.lblDay1.Location = new System.Drawing.Point(466, 118);
             this.lblDay1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDay1.Name = "lblDay1";
             this.lblDay1.Size = new System.Drawing.Size(24, 16);
@@ -119,7 +119,7 @@
             // 
             this.lblMonthDays.AutoSize = true;
             this.lblMonthDays.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblMonthDays.Location = new System.Drawing.Point(397, 84);
+            this.lblMonthDays.Location = new System.Drawing.Point(403, 84);
             this.lblMonthDays.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMonthDays.Name = "lblMonthDays";
             this.lblMonthDays.Size = new System.Drawing.Size(88, 16);
@@ -129,17 +129,18 @@
             // txtMonthDays
             // 
             this.txtMonthDays.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtMonthDays.Location = new System.Drawing.Point(400, 112);
+            this.txtMonthDays.Location = new System.Drawing.Point(406, 112);
             this.txtMonthDays.Margin = new System.Windows.Forms.Padding(4);
             this.txtMonthDays.Name = "txtMonthDays";
-            this.txtMonthDays.Size = new System.Drawing.Size(73, 26);
+            this.txtMonthDays.Size = new System.Drawing.Size(49, 26);
             this.txtMonthDays.TabIndex = 7;
+            this.txtMonthDays.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // lblDay2
             // 
             this.lblDay2.AutoSize = true;
             this.lblDay2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblDay2.Location = new System.Drawing.Point(481, 210);
+            this.lblDay2.Location = new System.Drawing.Point(466, 202);
             this.lblDay2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDay2.Name = "lblDay2";
             this.lblDay2.Size = new System.Drawing.Size(24, 16);
@@ -150,7 +151,7 @@
             // 
             this.lblDismountDays.AutoSize = true;
             this.lblDismountDays.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblDismountDays.Location = new System.Drawing.Point(397, 175);
+            this.lblDismountDays.Location = new System.Drawing.Point(403, 168);
             this.lblDismountDays.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDismountDays.Name = "lblDismountDays";
             this.lblDismountDays.Size = new System.Drawing.Size(120, 16);
@@ -160,20 +161,22 @@
             // txtDismountDays
             // 
             this.txtDismountDays.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtDismountDays.Location = new System.Drawing.Point(400, 204);
+            this.txtDismountDays.Location = new System.Drawing.Point(406, 197);
             this.txtDismountDays.Margin = new System.Windows.Forms.Padding(4);
             this.txtDismountDays.Name = "txtDismountDays";
-            this.txtDismountDays.Size = new System.Drawing.Size(73, 26);
+            this.txtDismountDays.Size = new System.Drawing.Size(49, 26);
             this.txtDismountDays.TabIndex = 8;
+            this.txtDismountDays.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtHistory
             // 
             this.txtHistory.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtHistory.Location = new System.Drawing.Point(12, 336);
+            this.txtHistory.Location = new System.Drawing.Point(19, 336);
             this.txtHistory.Multiline = true;
             this.txtHistory.Name = "txtHistory";
+            this.txtHistory.ReadOnly = true;
             this.txtHistory.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtHistory.Size = new System.Drawing.Size(580, 247);
+            this.txtHistory.Size = new System.Drawing.Size(574, 247);
             this.txtHistory.TabIndex = 10;
             this.txtHistory.WordWrap = false;
             // 
@@ -181,18 +184,18 @@
             // 
             this.lblYuan2.AutoSize = true;
             this.lblYuan2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblYuan2.Location = new System.Drawing.Point(339, 255);
+            this.lblYuan2.Location = new System.Drawing.Point(335, 254);
             this.lblYuan2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblYuan2.Name = "lblYuan2";
-            this.lblYuan2.Size = new System.Drawing.Size(104, 16);
+            this.lblYuan2.Size = new System.Drawing.Size(24, 16);
             this.lblYuan2.TabIndex = 37;
-            this.lblYuan2.Text = "元（人民币）";
+            this.lblYuan2.Text = "元";
             // 
             // lblRepayment
             // 
             this.lblRepayment.AutoSize = true;
             this.lblRepayment.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblRepayment.Location = new System.Drawing.Point(93, 254);
+            this.lblRepayment.Location = new System.Drawing.Point(107, 253);
             this.lblRepayment.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRepayment.Name = "lblRepayment";
             this.lblRepayment.Size = new System.Drawing.Size(88, 16);
@@ -202,10 +205,10 @@
             // txtRepayment
             // 
             this.txtRepayment.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtRepayment.Location = new System.Drawing.Point(191, 249);
+            this.txtRepayment.Location = new System.Drawing.Point(197, 248);
             this.txtRepayment.Margin = new System.Windows.Forms.Padding(4);
             this.txtRepayment.Name = "txtRepayment";
-            this.txtRepayment.Size = new System.Drawing.Size(139, 26);
+            this.txtRepayment.Size = new System.Drawing.Size(130, 26);
             this.txtRepayment.TabIndex = 6;
             // 
             // cmbCalcMode
@@ -217,17 +220,17 @@
             "等额本金",
             "等额本息",
             "现金分期"});
-            this.cmbCalcMode.Location = new System.Drawing.Point(191, 206);
+            this.cmbCalcMode.Location = new System.Drawing.Point(197, 205);
             this.cmbCalcMode.Margin = new System.Windows.Forms.Padding(4);
             this.cmbCalcMode.Name = "cmbCalcMode";
-            this.cmbCalcMode.Size = new System.Drawing.Size(137, 24);
+            this.cmbCalcMode.Size = new System.Drawing.Size(130, 24);
             this.cmbCalcMode.TabIndex = 5;
             // 
             // lblCalcMode
             // 
             this.lblCalcMode.AutoSize = true;
             this.lblCalcMode.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblCalcMode.Location = new System.Drawing.Point(93, 210);
+            this.lblCalcMode.Location = new System.Drawing.Point(107, 209);
             this.lblCalcMode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCalcMode.Name = "lblCalcMode";
             this.lblCalcMode.Size = new System.Drawing.Size(88, 16);
@@ -238,7 +241,7 @@
             // 
             this.lblPercent.AutoSize = true;
             this.lblPercent.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblPercent.Location = new System.Drawing.Point(339, 121);
+            this.lblPercent.Location = new System.Drawing.Point(335, 120);
             this.lblPercent.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPercent.Name = "lblPercent";
             this.lblPercent.Size = new System.Drawing.Size(16, 16);
@@ -248,9 +251,9 @@
             // btnCalculate
             // 
             this.btnCalculate.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnCalculate.Location = new System.Drawing.Point(199, 293);
+            this.btnCalculate.Location = new System.Drawing.Point(208, 292);
             this.btnCalculate.Name = "btnCalculate";
-            this.btnCalculate.Size = new System.Drawing.Size(121, 25);
+            this.btnCalculate.Size = new System.Drawing.Size(109, 25);
             this.btnCalculate.TabIndex = 9;
             this.btnCalculate.Text = "计算利息";
             this.btnCalculate.UseVisualStyleBackColor = true;
@@ -260,12 +263,12 @@
             // 
             this.lblYuan.AutoSize = true;
             this.lblYuan.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblYuan.Location = new System.Drawing.Point(339, 34);
+            this.lblYuan.Location = new System.Drawing.Point(335, 33);
             this.lblYuan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblYuan.Name = "lblYuan";
-            this.lblYuan.Size = new System.Drawing.Size(104, 16);
+            this.lblYuan.Size = new System.Drawing.Size(24, 16);
             this.lblYuan.TabIndex = 24;
-            this.lblYuan.Text = "元（人民币）";
+            this.lblYuan.Text = "元";
             // 
             // cmbRateMode
             // 
@@ -276,17 +279,17 @@
             "日利率",
             "月利率",
             "年利率"});
-            this.cmbRateMode.Location = new System.Drawing.Point(190, 162);
+            this.cmbRateMode.Location = new System.Drawing.Point(196, 161);
             this.cmbRateMode.Margin = new System.Windows.Forms.Padding(4);
             this.cmbRateMode.Name = "cmbRateMode";
-            this.cmbRateMode.Size = new System.Drawing.Size(137, 24);
+            this.cmbRateMode.Size = new System.Drawing.Size(131, 24);
             this.cmbRateMode.TabIndex = 4;
             // 
             // lblRateMode
             // 
             this.lblRateMode.AutoSize = true;
             this.lblRateMode.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblRateMode.Location = new System.Drawing.Point(93, 166);
+            this.lblRateMode.Location = new System.Drawing.Point(107, 165);
             this.lblRateMode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRateMode.Name = "lblRateMode";
             this.lblRateMode.Size = new System.Drawing.Size(88, 16);
@@ -297,7 +300,7 @@
             // 
             this.lblRate.AutoSize = true;
             this.lblRate.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblRate.Location = new System.Drawing.Point(125, 121);
+            this.lblRate.Location = new System.Drawing.Point(139, 120);
             this.lblRate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRate.Name = "lblRate";
             this.lblRate.Size = new System.Drawing.Size(56, 16);
@@ -333,26 +336,27 @@
             "22",
             "23",
             "24"});
-            this.cmbPeriods.Location = new System.Drawing.Point(189, 73);
+            this.cmbPeriods.Location = new System.Drawing.Point(195, 72);
             this.cmbPeriods.Margin = new System.Windows.Forms.Padding(4);
             this.cmbPeriods.Name = "cmbPeriods";
-            this.cmbPeriods.Size = new System.Drawing.Size(139, 24);
+            this.cmbPeriods.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.cmbPeriods.Size = new System.Drawing.Size(132, 24);
             this.cmbPeriods.TabIndex = 2;
             // 
             // txtRate
             // 
             this.txtRate.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtRate.Location = new System.Drawing.Point(189, 117);
+            this.txtRate.Location = new System.Drawing.Point(195, 116);
             this.txtRate.Margin = new System.Windows.Forms.Padding(4);
             this.txtRate.Name = "txtRate";
-            this.txtRate.Size = new System.Drawing.Size(139, 26);
+            this.txtRate.Size = new System.Drawing.Size(132, 26);
             this.txtRate.TabIndex = 3;
             // 
             // lblPeriods
             // 
             this.lblPeriods.AutoSize = true;
             this.lblPeriods.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblPeriods.Location = new System.Drawing.Point(109, 77);
+            this.lblPeriods.Location = new System.Drawing.Point(123, 76);
             this.lblPeriods.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPeriods.Name = "lblPeriods";
             this.lblPeriods.Size = new System.Drawing.Size(72, 16);
@@ -363,7 +367,7 @@
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblTotal.Location = new System.Drawing.Point(77, 34);
+            this.lblTotal.Location = new System.Drawing.Point(91, 33);
             this.lblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(104, 16);
@@ -373,29 +377,18 @@
             // txtTotal
             // 
             this.txtTotal.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtTotal.Location = new System.Drawing.Point(189, 29);
+            this.txtTotal.Location = new System.Drawing.Point(195, 28);
             this.txtTotal.Margin = new System.Windows.Forms.Padding(4);
             this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(139, 26);
+            this.txtTotal.Size = new System.Drawing.Size(132, 26);
             this.txtTotal.TabIndex = 1;
-            // 
-            // lblPeriodsTip
-            // 
-            this.lblPeriodsTip.AutoSize = true;
-            this.lblPeriodsTip.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblPeriodsTip.Location = new System.Drawing.Point(339, 77);
-            this.lblPeriodsTip.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblPeriodsTip.Name = "lblPeriodsTip";
-            this.lblPeriodsTip.Size = new System.Drawing.Size(24, 16);
-            this.lblPeriodsTip.TabIndex = 56;
-            this.lblPeriodsTip.Text = "期";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(660, 647);
-            this.Controls.Add(this.pnlLoan);
+            this.ClientSize = new System.Drawing.Size(645, 631);
+            this.Controls.Add(this.gpbLoan);
             this.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
@@ -403,7 +396,6 @@
             this.Text = "贷款利息计算器";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.Shown += new System.EventHandler(this.MainForm_Shown);
-            this.pnlLoan.ResumeLayout(false);
             this.gpbLoan.ResumeLayout(false);
             this.gpbLoan.PerformLayout();
             this.ResumeLayout(false);
@@ -412,8 +404,23 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel pnlLoan;
         private System.Windows.Forms.GroupBox gpbLoan;
+        private System.Windows.Forms.Label lblPeriodsTip;
+        private System.Windows.Forms.Label lblDay1;
+        private System.Windows.Forms.Label lblMonthDays;
+        private System.Windows.Forms.TextBox txtMonthDays;
+        private System.Windows.Forms.Label lblDay2;
+        private System.Windows.Forms.Label lblDismountDays;
+        private System.Windows.Forms.TextBox txtDismountDays;
+        private System.Windows.Forms.TextBox txtHistory;
+        private System.Windows.Forms.Label lblYuan2;
+        private System.Windows.Forms.Label lblRepayment;
+        private System.Windows.Forms.TextBox txtRepayment;
+        private System.Windows.Forms.ComboBox cmbCalcMode;
+        private System.Windows.Forms.Label lblCalcMode;
+        private System.Windows.Forms.Label lblPercent;
+        private System.Windows.Forms.Button btnCalculate;
+        private System.Windows.Forms.Label lblYuan;
         private System.Windows.Forms.ComboBox cmbRateMode;
         private System.Windows.Forms.Label lblRateMode;
         private System.Windows.Forms.Label lblRate;
@@ -422,22 +429,6 @@
         private System.Windows.Forms.Label lblPeriods;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.TextBox txtTotal;
-        private System.Windows.Forms.Label lblYuan;
-        private System.Windows.Forms.Button btnCalculate;
-        private System.Windows.Forms.Label lblPercent;
-        private System.Windows.Forms.ComboBox cmbCalcMode;
-        private System.Windows.Forms.Label lblCalcMode;
-        private System.Windows.Forms.Label lblRepayment;
-        private System.Windows.Forms.TextBox txtRepayment;
-        private System.Windows.Forms.Label lblYuan2;
-        private System.Windows.Forms.TextBox txtHistory;
-        private System.Windows.Forms.Label lblDay2;
-        private System.Windows.Forms.Label lblDismountDays;
-        private System.Windows.Forms.TextBox txtDismountDays;
-        private System.Windows.Forms.Label lblDay1;
-        private System.Windows.Forms.Label lblMonthDays;
-        private System.Windows.Forms.TextBox txtMonthDays;
-        private System.Windows.Forms.Label lblPeriodsTip;
     }
 }
 
