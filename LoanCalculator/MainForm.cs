@@ -35,6 +35,9 @@ namespace LoanCalculator
             // 计息方式，默认选项: 等额本息
             cmbCalcMode.SelectedIndex = 1;
 
+            // 每月天数, 默认值为 30 天.
+            txtMonthDays.Text = "30";
+
             // 首月优惠天数, 默认值: 7天
             txtDismountDays.Text = "7";
         }
@@ -45,14 +48,14 @@ namespace LoanCalculator
         }
 
         private double CalcalateLoan(double total, double rate, int periods, int rateMode, int calcMode,
-                                     int dismountDays, ref string calcHistory)
+                                     int monthDays, int dismountDays, ref string calcHistory)
         {
             double repaymentTotal = 0.0;
 
             try
             {
                 DecInterestCalculator calculator = new DecInterestCalculator(total, rate, periods, rateMode);
-                calculator.SetMonthDays(31);
+                calculator.SetMonthDays(monthDays);
                 calculator.SetDismountDays(dismountDays);
                 repaymentTotal = calculator.Calculate(ref calcHistory);
             }
@@ -71,15 +74,17 @@ namespace LoanCalculator
             int periods = 12;
             int rateMode = 0;
             int calcMode = 1;
+            int monthDays = 0;
             int dismountDays = 0;
 
             try
             {
                 total = Double.Parse(txtTotal.Text);
                 rate = Double.Parse(txtRate.Text);
-                periods = cmbPeriods.SelectedIndex + 1;
+                periods = Int32.Parse(cmbPeriods.Text);
                 rateMode = cmbRateMode.SelectedIndex;
                 calcMode = cmbCalcMode.SelectedIndex;
+                monthDays = Int32.Parse(txtMonthDays.Text);
                 dismountDays = Int32.Parse(txtDismountDays.Text);
             }
             catch (Exception ex)
@@ -93,7 +98,7 @@ namespace LoanCalculator
             // 计算还款总额
             string calcHistory = "";
             double repayment = CalcalateLoan(total, rate, periods, rateMode, calcMode,
-                                             dismountDays, ref calcHistory);
+                                             monthDays, dismountDays, ref calcHistory);
 
             // 显示还款总额
             txtRepayment.Text = String.Format("{0:0.00}", repayment);
